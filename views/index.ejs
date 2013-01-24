@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="public/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="public/javascripts/bootstrap.min.js" rel="javascript" type="text/javascript">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/javascripts/bootstrap.min.js" rel="javascript" type="text/javascript">
+    <style type="text/css">
+body {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+/* Custom container */
+      .container-narrow {
+	margin: 0 auto;
+	max-width: 700px;
+}
+.container-narrow > hr {
+	margin: 30px 0;
+}
+/* Main marketing message and sign up button */
+      .jumbotron {
+	margin: 60px 0;
+	text-align: center;
+}
+.jumbotron h1 {
+	font-size: 72px;
+	line-height: 1;
+}
+.jumbotron .btn {
+	font-size: 21px;
+	padding: 14px 24px;
+}
+/* Supporting marketing content */
+      .marketing {
+	margin: 60px 0;
+}
+.marketing p + h4 {
+	margin-top: 28px;
+}
+</style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    </head>
+
+    <body>
+    <script>
+    function wybierz_date(){
+    	alert("data")
+    }
+    
+    function dodaj_pracownika(){
+    	alert("dwa")
+    }
+    </script>
+<div class="container">
+<div class= "pull-right">
+      <ul class="nav nav-pills pull-right">
+    <li class= "active"> <a href="#">Moje umowy</a> </li>
+    <li> <a href="#">Moi pracownicy</a> </li>
+    <li> <a href="#">Moje dzieła</a> </li>
+  </ul>
+    </div>
+<div class="page-header offset1">
+      <h1>Smieciówki.pl</h1>
+      <h6>Zarządzanie umowami śmieciowymi</h6>
+    </div>
+    
+<div class="row">
+<div class="span2"> </div>
+<div class="span8">
+      <h2>Tworzenie umowy</h2>
+      <div class="well">
+        <form action="/send" method="post">
+            <div class="form-inline"> Umowa o
+                  <select name="typ_umowy">
+                <option>dzieło</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+                  zawarta
+            	dnia <a href="#" onclick="wybierz_date()">{{today}}</a><input type="hidden" name="data_zawarcia"></div>
+            <p>pomiędzy</p>
+            <input type="text" class="input-small" placeholder="Firma" name="firma" />
+            <input type="text" class="input-small" placeholder="NIP" name="nip" />
+            <input type="text" class="input-medium" placeholder="Adres" name="adres_firmy" />
+            <input type="text" class="input-small" placeholder="Email" name="email_firmy" />
+            <p>a:</p>
+            <input type="text" class="input-small" placeholder="Imię i nazwisko" name="imie_nazwisko_pracownika[0]" />
+            <input type="text" class="input-small" placeholder="Telefon" name="telefon_pracownika[0]" />
+            <input type="text" class="input-small" placeholder="Email" name="email_pracownika[0]" />
+            <br>
+            
+            <textarea style="width:97%" rows="5" name="przedmiot_umowy"></textarea><br>
+                    <div class="form-inline">
+                        <input type="text" class="input-small" placeholder="kwota" name="kwota"/>
+                    	<select class="input-small" name="brutto">
+                        	<option value="1">brutto</option>
+                        	<option value="2">netto</option>
+                      	</select>
+						  
+                    	<br>
+                    </div>
+                    
+                    <a class="btn btn-link"  href="#" onclick="dodaj_pracownika()">Dodaj nowego pracownika</a>
+                    
+                    <div class= "pull-right">   
+						  <button class="btn btn-success offset6"><i class="icon-arrow-right icon-white"></i>Dalej</button>
+					</div> 
+        </form>
+	</div>
+	</div> 
+
+
+	        <div class="span2"> </div>
+    </div>
+</div>
+</body>
+</html>
