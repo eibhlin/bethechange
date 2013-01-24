@@ -75,57 +75,67 @@ body {
 		<div class="row">
 		<div class="span1"> </div>
         <div class="span2">
-        	<br>
-        	<img src="http://dummyimage.com/250x200/333231/000000.png"></img><br><br><br>
-            
-        
-        <div class=center>
-            <button class="btn btn-small myButton active" type="button">Add pictures</button>
-            <button class="btn btn-small myButton" type="button">Download</button>
-            <button class="btn btn-small myButton" type="button">Order a poster</button>
-            <button class="btn btn-success small myButton" type="button">Share!</button>
-        </div>
-            
+        	<img src="http://dummyimage.com/250x200/333231/000000.png"></img>
         </div>
 		<div class="span8">
         
-        
-        
-        <h3>There is some work to be done, but you are an achiever, aren't you?</h3>	
-        <form class="form-inline"><br>
-        
-        <div class=right>
-        	<small>Look up each and every element consisting your dream</small>
-        
-        <form>
-        	<div class="input-append">
-  				<input class="span2" id="appendedInputButtons" type="text" placeholder="adventure" name="search">
-                <button class="btn" type="button"><i class="icon-search"></i></button>
-         	</div>
-        </form>
+        	
             
-         </div><br>
-            
-        <img src="http://dummyimage.com/650x400/333231/000000.png"></img><br><br>
+        <h2>Once you got your vision it's time to create action items for you to follow</h2><br>
         
-        	<button class="btn btn-danger pull-right">next step <i class="icon-arrow-right icon-white"></i></button><br><br>
+        <p>Just a short list - those tasks should take around 30 minutes each (so you can't find an excuse not to finish them)</p><br><br>
+        
+        
+        <div>
+        	<%  for(var i=0;i<Expenses.length;i++) { %>
+        	<label class="checkbox">
+      			<input type="checkbox"><%= Expenses[i].itemAmount %>
+        	</label>
+            <% 
+			} //for
+			%>
+        	<label class="checkbox">
+      			<input type="checkbox"> create a lean canvas business model
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> create a presentation
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> present the idea
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> create wireframes for the web app
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> create a list of benefits for both parties
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> learn node js
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> create a simple task app
+        	</label>
+        	<label class="checkbox">
+      			<input type="checkbox"> add facebook integration
+        	</label>
+        </div>
+        
+        
+        <button class="btn btn-danger pull-right">next step <i class="icon-arrow-right icon-white"></i></button><br><br>
         
         	
             <div class="row">
   				<div class="span8 centered-pills">
         	<ul class="nav nav-pills">
-  				<li class="active">
+  				<li>
     				<a href="#">1. Dream</a>
   				</li>
-  				<li><a href="#">2. Plan</a></li>
+  				<li class="active"><a href="#">2. Plan</a></li>
   				<li><a href="#">3. Get support</a></li>
             	<li><a href="#">4. Achieve</a></li>
 			</ul>
             </div>
 				</div>
-        
-        	
-        
             
              	
                 
